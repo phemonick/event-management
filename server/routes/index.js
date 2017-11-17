@@ -1,7 +1,8 @@
 import centerRoute from './center';
-import eventRoute from './event'
+import eventRouter from './event'
 
 export{
     centerRoute,
-    eventRoute
+    eventRouter
+    
 }
