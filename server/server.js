@@ -1,10 +1,7 @@
 import express from 'express';
 import morgan from 'morgan';
 import bodyParser from 'body-parser';
-import eventRouter from './routes/api';
-import db from './data/db'
-
-const data = db.events;
+import { eventRouter, centerRoute} from './routes';
 
 const app = express();
 
@@ -14,11 +11,12 @@ app.use(bodyParser.json({ type: 'application/json' }))
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-app.use('/api', eventRouter);
+app.use('/api/events', eventRouter);
+app.use('/api/center', centerRoute)
 
 app.get('/',  (req, res) => {
     res.status(200).send({
-        message: data,
+        message: 'welcome to our events',
     });
 });
 
