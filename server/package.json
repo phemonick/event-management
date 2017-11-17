@@ -1,0 +1,30 @@
+{
+  "name": "event-management",
+  "version": "1.0.0",
+  "description": "Event management Application",
+  "main": "server.js",
+  "scripts": {
+    "start": "babel-watch server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phemonick/event-management.git"
+  },
+  "author": "teleios",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phemonick/event-management/issues"
+  },
+  "homepage": "https://github.com/phemonick/event-management#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "body-parser": "^1.18.2",
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0"
+  }
+}
