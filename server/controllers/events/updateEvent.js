@@ -1,12 +1,13 @@
-import db from '../data/db';
+import db from '../../data/db';
 const data = db.events;
 
 class UpdateEvent{
     static update(req, res){
         const { id }= req.params;
-        let event = {};
+        
         data.forEach((result) => {
-            if(result.id === id){
+            console.log(result);
+            if(result.id == id){
 
                 result.id = req.body.id;
                 result.name = req.body.name;
@@ -18,9 +19,10 @@ class UpdateEvent{
                     message: 'edited'
                 })
             }
+            
+            })
             res.status(404).send({
                 message: 'doesnt exist'
-            })
         })
     }
 }

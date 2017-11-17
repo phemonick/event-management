@@ -1,10 +1,10 @@
 import express from 'express'
-import { CreateEvent, UpdateEvent, DeleteEvent } from '../controllers'
+import { CreateEvent, UpdateEvent, DeleteEvent } from '../controllers/events'
 
 const eventRouter = express.Router();
 
-    router.post('/events', CreateEvent.create)
-    router.delete('/events', DeleteEvent.delete)
-    router.put('/events/:id', UpdateEvent.update)
+eventRouter.post('/events', CreateEvent.create)
+eventRouter.delete('/events/:id', DeleteEvent.delete)
+eventRouter.put('/events/:id', UpdateEvent.update)
 
 export default eventRouter;

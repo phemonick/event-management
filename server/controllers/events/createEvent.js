@@ -1,4 +1,4 @@
-import db from '../data/db';
+import db from '../../data/db';
 
 const data = db.events;
 

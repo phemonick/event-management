@@ -2,7 +2,7 @@ import express from 'express';
 import morgan from 'morgan';
 import bodyParser from 'body-parser';
 import eventRouter from './routes/api';
-
+import db from './data/db'
 
 const data = db.events;
 
